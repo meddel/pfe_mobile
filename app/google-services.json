@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "835946202522",
+    "firebase_url": "https://drawer-demo-76d8b.firebaseio.com",
+    "project_id": "drawer-demo-76d8b",
+    "storage_bucket": "drawer-demo-76d8b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:835946202522:android:578879186705793059a623",
+        "android_client_info": {
+          "package_name": "com.mostdanger.drawerdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "835946202522-ok14pcb8gbh3mn86hten499a55imhpen.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEZN5Wvl_XhfUdwzFOS2iKSyASVpk6Lpg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "835946202522-ok14pcb8gbh3mn86hten499a55imhpen.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
