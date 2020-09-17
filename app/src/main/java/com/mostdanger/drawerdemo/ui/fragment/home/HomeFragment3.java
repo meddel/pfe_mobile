@@ -1,4 +1,4 @@
-package com.mostdanger.drawerdemo.ui.home;
+package com.mostdanger.drawerdemo.ui.fragment.home;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -29,7 +29,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.mostdanger.drawerdemo.R;
-import com.mostdanger.drawerdemo.ui.home.map_dial.MapDial;
+import com.mostdanger.drawerdemo.ui.fragment.home.map_dial.MapDial;
 
 public class HomeFragment3 extends Fragment implements OnMapReadyCallback {
 

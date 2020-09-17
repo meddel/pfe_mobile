@@ -1,4 +1,4 @@
-package com.mostdanger.drawerdemo.ui.slideshow;
+package com.mostdanger.drawerdemo.ui.fragment.slideshow;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

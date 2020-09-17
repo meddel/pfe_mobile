@@ -7,37 +7,37 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.mostdanger.drawerdemo.ui.home.HomeFragment"
+        android:name="com.mostdanger.drawerdemo.ui.fragment.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_gestBus"
-        android:name="com.mostdanger.drawerdemo.ui.gest_bus.GestBusFragment"
+        android:name="com.mostdanger.drawerdemo.ui.fragment.gest_bus.GestBusFragment"
         android:label="@string/menu_gestBus"
         tools:layout="@layout/fragment_gest_bus" />
 
     <fragment
         android:id="@+id/nav_gestMap"
-        android:name="com.mostdanger.drawerdemo.ui.gest_map.GestMapFragment"
+        android:name="com.mostdanger.drawerdemo.ui.fragment.gest_map.GestMapFragment"
         android:label="@string/menu_gestMap"
         tools:layout="@layout/fragment_gest_map" />
 
     <fragment
         android:id="@+id/nav_gestCourse"
-        android:name="com.mostdanger.drawerdemo.ui.gest_course.GestCourseFragment"
+        android:name="com.mostdanger.drawerdemo.ui.fragment.gest_course.GestCourseFragment"
         android:label="@string/menu_gestCourse"
         tools:layout="@layout/fragment_gest_course" />
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.mostdanger.drawerdemo.ui.gallery.GalleryFragment"
+        android:name="com.mostdanger.drawerdemo.ui.fragment.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.mostdanger.drawerdemo.ui.slideshow.SlideshowFragment"
+        android:name="com.mostdanger.drawerdemo.ui.fragment.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
 </navigation>

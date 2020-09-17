@@ -1,19 +1,21 @@
-package com.mostdanger.drawerdemo.ui.slideshow;
+package com.mostdanger.drawerdemo.ui.fragment.gest_bus;
+
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class SlideshowViewModel extends ViewModel {
+public class GestBusViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public SlideshowViewModel() {
+    public GestBusViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is slideshow fragment");
+        mText.setValue("This is gestBus fragment");
     }
 
     public LiveData<String> getText() {
+
         return mText;
     }
 }

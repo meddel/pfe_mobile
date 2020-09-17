@@ -1,4 +1,4 @@
-package com.mostdanger.drawerdemo.ui.home;
+package com.mostdanger.drawerdemo.ui.fragment.home;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -29,13 +29,12 @@ import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
-import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
 import com.mostdanger.drawerdemo.R;
-import com.mostdanger.drawerdemo.ui.home.map_dial.MapDial;
+import com.mostdanger.drawerdemo.ui.fragment.home.map_dial.MapDial;
 
-import static com.mostdanger.drawerdemo.MainActivity.account_type;
+import static com.mostdanger.drawerdemo.ui.activity.MainActivity.account_type;
 
 public class HomeFragment extends Fragment implements OnMapReadyCallback {
 
@@ -86,9 +85,6 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
 
             @Override
             public void onMapReady(final GoogleMap googleMap) {
-                Toast.makeText(getContext(),
-                        "mapready",
-                        Toast.LENGTH_SHORT).show();
 
                 if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                     // TODO: Consider calling
@@ -104,22 +100,14 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
                         .addOnSuccessListener(getActivity(), new OnSuccessListener<Location>() {
                             @Override
                             public void onSuccess(Location location) {
-                                // Got last known location. In some rare situations this can be null.
-                                LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-                                googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-                                Toast.makeText(getContext(),
-                                        "before zoom",
-                                        Toast.LENGTH_SHORT).show();
-                                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 16));
-
-
-
-
-
-
                                 if (location != null) {
-                                    // Logic to handle location object
-                                }
+                                        LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
+                                        googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+                                        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 16));
+                                        if (location != null) {
+                                            // Logic to handle location object
+                                        }
+                                    }
                             }
                         });
                 locationListener = new LocationListener() {

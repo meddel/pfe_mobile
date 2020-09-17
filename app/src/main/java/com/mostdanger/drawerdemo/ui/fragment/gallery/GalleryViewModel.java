@@ -1,4 +1,4 @@
-package com.mostdanger.drawerdemo.ui.gallery;
+package com.mostdanger.drawerdemo.ui.fragment.gallery;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

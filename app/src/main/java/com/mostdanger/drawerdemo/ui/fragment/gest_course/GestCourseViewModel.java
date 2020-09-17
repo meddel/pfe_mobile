@@ -1,4 +1,4 @@
-package com.mostdanger.drawerdemo.ui.gest_course;
+package com.mostdanger.drawerdemo.ui.fragment.gest_course;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

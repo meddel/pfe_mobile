@@ -1,4 +1,4 @@
-package com.mostdanger.drawerdemo.ui.gallery;
+package com.mostdanger.drawerdemo.ui.fragment.gest_course;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.mostdanger.drawerdemo.R;
 
-public class GalleryFragment extends Fragment {
+public class GestCourseFragment extends Fragment {
 
-    private GalleryViewModel galleryViewModel;
+    private GestCourseViewModel gestCourseViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        galleryViewModel =
-                ViewModelProviders.of(this).get(GalleryViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_gallery, container, false);
-        final TextView textView = root.findViewById(R.id.text_gallery);
-        galleryViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        gestCourseViewModel =
+                ViewModelProviders.of(this).get(GestCourseViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_gest_course, container, false);
+        final TextView textView = root.findViewById(R.id.text_gest_course);
+        gestCourseViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

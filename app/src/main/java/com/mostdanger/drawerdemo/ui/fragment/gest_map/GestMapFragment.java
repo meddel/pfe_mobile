@@ -1,7 +1,6 @@
-package com.mostdanger.drawerdemo.ui.gest_map;
+package com.mostdanger.drawerdemo.ui.fragment.gest_map;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +13,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.mostdanger.drawerdemo.R;
-import com.mostdanger.drawerdemo.ui.home.map_dial.MapDial;
+import com.mostdanger.drawerdemo.ui.fragment.home.map_dial.MapDial;
 
 public class GestMapFragment extends Fragment {
 

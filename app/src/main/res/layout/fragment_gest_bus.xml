@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.gest_bus.GestBusFragment">
+    tools:context=".ui.fragment.gest_bus.GestBusFragment">
 
     <TextView
         android:id="@+id/text_gest_bus"
