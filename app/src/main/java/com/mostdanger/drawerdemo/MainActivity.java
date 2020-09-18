@@ -15,6 +15,9 @@ import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -31,6 +34,13 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import com.mostdanger.drawerdemo.ui.home.map_dial.MapDial;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
     public static final int PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION=9003;
     public static final int ERROR_DIALOG_REQUEST=9001;
     private static final String TAG = "MainActivity";
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
 
     @Override
@@ -207,5 +218,32 @@ public class MainActivity extends AppCompatActivity {
         toast.show();
         /*MapDial mapDial=new MapDial();
         mapDial.showNow(getSupportFragmentManager(),"add station");*/
+    }
+    public void ajouterBus(boolean etatBus, String matriculeBus, String typeBus, String marqueBus, Date dateFabBus,Date dateActBus)
+    {
+        String numBus= UUID.randomUUID().toString();
+
+        Map<String,Object> bus=new HashMap<>();
+        bus.put("numBus",numBus);
+        bus.put("etatBus",etatBus);
+        bus.put("matBus",matriculeBus);
+        bus.put("typeBus",typeBus);
+        bus.put("marqueBus",marqueBus);
+        bus.put("dateFabBus",dateFabBus);
+        bus.put("dateActBus",dateActBus);
+        db.collection("Bus").document(numBus).set(bus)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        Toast.makeText(MainActivity.this, "bus ajouter avec succès", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+
+                    }
+                });
     }
 }
