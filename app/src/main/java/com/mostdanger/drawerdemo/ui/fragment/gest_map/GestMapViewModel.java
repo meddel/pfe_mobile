@@ -1,4 +1,4 @@
-package com.mostdanger.drawerdemo.ui.gest_map;
+package com.mostdanger.drawerdemo.ui.fragment.gest_map;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

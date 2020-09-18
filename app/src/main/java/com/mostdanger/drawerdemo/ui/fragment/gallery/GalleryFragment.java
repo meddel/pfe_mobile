@@ -1,4 +1,4 @@
-package com.mostdanger.drawerdemo.ui.gest_bus;
+package com.mostdanger.drawerdemo.ui.fragment.gallery;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.mostdanger.drawerdemo.R;
 
-public class GestBusFragment extends Fragment {
+public class GalleryFragment extends Fragment {
 
-    private GestBusViewModel gestBusViewModel;
+    private GalleryViewModel galleryViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        gestBusViewModel =
-                ViewModelProviders.of(this).get(GestBusViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_gest_bus, container, false);
-        final TextView textView = root.findViewById(R.id.text_gest_bus);
-        gestBusViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        galleryViewModel =
+                ViewModelProviders.of(this).get(GalleryViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_gallery, container, false);
+        final TextView textView = root.findViewById(R.id.text_gallery);
+        galleryViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
