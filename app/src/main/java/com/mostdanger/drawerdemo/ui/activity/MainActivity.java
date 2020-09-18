@@ -20,6 +20,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.mostdanger.drawerdemo.R;
 
 import androidx.annotation.NonNull;
@@ -49,6 +54,9 @@ public class MainActivity extends AppCompatActivity {
     public static final int ERROR_DIALOG_REQUEST=9001;
     private static final String TAG = "MainActivity";
     FirebaseFirestore db = FirebaseFirestore.getInstance();
+    DatabaseReference databaseBus;
+    List<Bus> buses;
+
 
 
     @Override
@@ -78,6 +86,32 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
+    }
+    protected void onStart() {
+        super.onStart();
+        //attaching value event listener 
+        databaseBus.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                //clearing the previous artist list
+                buses.clear();
+
+                //iterating through all the nodes 
+                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+                    //getting artist
+                    Bus artist = postSnapshot.getValue(Bus.class);
+                    //adding artist to the list 
+                    buses.add(artist);
+                }
+
+                }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
     }
 
     private boolean checkMapServices(){
