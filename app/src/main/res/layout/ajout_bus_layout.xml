@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="46dp"
+    >
+
+
+
+
+        <EditText
+            android:id="@+id/edit_text_numemat"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="numero ematriculation"
+            android:inputType="text"
+            android:layout_marginBottom="20dp"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/edit_text_typebus"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="type bus"
+            android:inputType="text"
+            android:layout_marginBottom="20dp"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/edit_text_datefabbus"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="date fabrication"
+            android:ems="10"
+            android:layout_marginBottom="20dp"
+            android:inputType="text" />
+        <EditText
+            android:id="@+id/edit_text_marqbus"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="marque de bus"
+            android:inputType="text"
+            android:layout_marginBottom="20dp"
+            tools:ignore="HardcodedText" />
+        <EditText
+            android:id="@+id/edit_text_datemiseserv"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="date mise en service"
+            android:ems="10"
+            android:layout_marginBottom="20dp"
+            android:inputType="text" />
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="add bus"
+            android:layout_gravity="center"
+            android:onClick="addBus" />
+
+
+
+    </LinearLayout>
