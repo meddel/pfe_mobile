@@ -53,13 +53,13 @@
             android:ems="10"
             android:layout_marginBottom="20dp"
             android:inputType="text" />
+
         <Button
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:text="add bus"
             android:layout_gravity="center"
-            android:onClick="addBus" />
+            android:onClick="addBus"
+            android:text="add bus" />
 
 
-
-    </LinearLayout>
+</LinearLayout>
